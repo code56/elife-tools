@@ -181,11 +181,12 @@ def subject_area(soup):
     Find the subject areas from article-categories subject tags
     """
     subject_area = []
+    subject_area_dict = {}
     
     tags = raw_parser.subject_area(soup)
     for tag in tags:
         subject_area.append(node_text(tag))
-        
+        print "my subject area", subject_area
     return subject_area
 
 def full_subject_area(soup):
